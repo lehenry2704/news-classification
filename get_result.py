@@ -3,9 +3,9 @@ from joblib import load
 from pyvi import ViTokenizer, ViPosTagger
 
 
-pipeline = load("text_classification.joblib")
+pipeline = load("model/text_classification.joblib")
 
-vectorizer = load("vectorizer.pkl")
+vectorizer = load("model/vectorizer.pkl")
 
 def transform_text(text):
     string = ViTokenizer.tokenize(text.lower().replace('\n', ' '))
